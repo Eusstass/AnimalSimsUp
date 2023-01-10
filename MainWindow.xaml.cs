@@ -12,17 +12,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSimsUp.windowsAnimal;
+
 
 namespace AnimalSimsUp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    ///
+   
     public partial class MainWindow : Window
     {
+        windowsAnimal.mainWindowsControll mainWindow = new mainWindowsControll();   
         public MainWindow()
         {
             InitializeComponent();
+            this.contentControlAnimal.Content = mainWindow;
         }
+
+
     }
 }

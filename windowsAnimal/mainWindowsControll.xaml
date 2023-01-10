@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="AnimalSimsUp.windowsAnimal.mainWindowsControll"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnimalSimsUp.windowsAnimal"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920">
+	<Grid x:Name ="gridMain">
+		<!--Tier 1-->
+		<Rectangle x:Name="TierBild1Rect" HorizontalAlignment="Left" Height="300" Margin="100,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name="Tier1Futter" Height="10" Width="300" Margin="100,425,1520,639"/>
+		<ProgressBar x:Name="Tier1Liebe" Height="10" Width="300" Margin="100,450,1520,620"/>
+		<ProgressBar x:Name="Tier1Schlaf" Height="10" Width="300" Margin="100,475,1520,595"/>
+		<ProgressBar x:Name="Tier1Sauberheit" Height="10" Width="300" Margin="100,500,1520,570"/>
+
+		<!--Tier 2-->
+		<Rectangle x:Name="TierBild2Rect" HorizontalAlignment="Left" Height="300" Margin="500,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name="Tier2Futter" HorizontalAlignment="Left" Height="10" Margin="500,425,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name="Tier2Liebe" HorizontalAlignment="Left" Height="10" Margin="500,450,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name="Tier2Schlaf" HorizontalAlignment="Left" Height="10" Margin="500,475,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name="Tier2Sauberheit" HorizontalAlignment="Left" Height="10" Margin="500,500,0,0" VerticalAlignment="Top" Width="300"/>
+
+		<!--Tier 3-->
+		<Rectangle x:Name="TierBild3Rect" HorizontalAlignment="Left" Height="300" Margin="900,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier3Futter" HorizontalAlignment="Left" Height="10" Margin="900,425,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier3Liebe" HorizontalAlignment="Left" Height="10" Margin="900,450,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier3Schlaf" HorizontalAlignment="Left" Height="10" Margin="900,475,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier3Sauberheit" HorizontalAlignment="Left" Height="10" Margin="900,500,0,0" VerticalAlignment="Top" Width="300"/>
+
+		<!--Tier 4-->
+		<Rectangle x:Name="TierBild4Rect" HorizontalAlignment="Left" Height="300" Margin="1300,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier4Futter" HorizontalAlignment="Left" Height="10" Margin="1300,425,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier4Liebe" HorizontalAlignment="Left" Height="10" Margin="1300,450,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier4Schlaf" HorizontalAlignment="Left" Height="10" Margin="1300,475,0,0" VerticalAlignment="Top" Width="300"/>
+		<ProgressBar x:Name ="Tier4Sauberheit" HorizontalAlignment="Left" Height="10" Margin="1300,500,0,0" VerticalAlignment="Top" Width="300"/>
+
+		<!--Button Füttern-->
+		<Button x:Name ="ButtonFuettern" Content="Füttern" HorizontalAlignment="Left" Margin="100,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
+		<!--Button Streichel-->
+		<Button x:Name ="ButtonStreicheln" Content="Streicheln" HorizontalAlignment="Left" Margin="500,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
+		<!--Button Saubermachen-->
+		<Button x:Name ="ButtonSaubermachen" Content="Saubermachen" HorizontalAlignment="Left" Margin="900,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
+		<!--Button neues Tier-->
+		<Button x:Name ="neuesTier" Content="NeuesTier" HorizontalAlignment="Left" Margin="1300,980,0,0" VerticalAlignment="Top" Height="36" Width="300" Click="neuesTier_Click"/>
+
+	</Grid>
+</UserControl>
