@@ -16,21 +16,22 @@ using System.Windows.Shapes;
 namespace AnimalSimsUp.windowsAnimal
 {
     /// <summary>
-    /// Interaktionslogik für mainWindowsControll.xaml
+    /// Interaktionslogik für shop2.xaml
     /// </summary>
-    public partial class mainWindowsControll : UserControl
+    public partial class shop2 : UserControl
     {
-        //Shop1 shop1 = new Shop1();
-        //public static mainWindowsControll mainwindowControll;
-        public mainWindowsControll()
+        //public static shop2 shop2Window;
+        //Shop1 shop1 = null;
+        public shop2()
         {
             InitializeComponent();
-            //mainwindowControll = this;
+            //shop2Window = this;
+            //shop1 = Shop1.shop1Window;
         }
-        
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void zurückButtonShop1_Click(object sender, RoutedEventArgs e)
         {
-            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop1Window;
+            MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop1Window;
         }
     }
 }

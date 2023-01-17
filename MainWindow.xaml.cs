@@ -24,11 +24,15 @@ namespace AnimalSimsUp
    
     public partial class MainWindow : Window
     {
-        windowsAnimal.mainWindowsControll mainWindow = new mainWindowsControll();   
+        public static windowsAnimal.mainWindowsControll mainWindow = new mainWindowsControll();
+        public static windowsAnimal.shop2 shop2Window = new windowsAnimal.shop2();
+        public static Shop1 shop1Window = new Shop1();
+        public static MainWindow AppWindow;
         public MainWindow()
         {
             InitializeComponent();
             this.contentControlAnimal.Content = mainWindow;
+            AppWindow = this;
         }
 
 
