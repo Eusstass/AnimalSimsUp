@@ -45,5 +45,19 @@
       <FileName>Opposum.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="AnimalSimsUp.ITier">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAAAEAAAAACAAAAAAABAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>ITier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Global">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAAABAAAAAA=</HashCode>
+      <FileName>Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

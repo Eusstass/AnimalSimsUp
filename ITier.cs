@@ -5,32 +5,27 @@ using System.Text;
 
 namespace AnimalSimsUp
 {
-    public class Tier : ITier
+    public abstract class ITier
     {
-        public int FutterValue;
-        public int SchlafenValue;
-        public int LiebeValue;
         protected int Art;
 
-        public Gehege Gehege
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public int FutterValue;
+
+        public int LiebeValue;
+
+        public int SchlafenValue;
 
         public void Futtern()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Streicheln()
+        public void Schlafen()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Schlafen()
+        public void Streicheln()
         {
             throw new System.NotImplementedException();
         }
