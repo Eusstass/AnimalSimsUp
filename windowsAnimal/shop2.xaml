@@ -24,12 +24,12 @@
         <Image Source="..\Bilder\tiger.jpg" x:Name="Gehege3Image" HorizontalAlignment="Left" Height="400" Margin="970,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         <Image Source="..\Bilder\giraffe.jpeg" x:Name="GehegeImage" HorizontalAlignment="Left" Height="400" Margin="1390,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
 
-        <Button x:Name="KaufenTierShopOpossom" Content="Kaufen" HorizontalAlignment="Left" Margin="130,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenTierShopOpossom" Content="Kaufen" HorizontalAlignment="Left" Margin="130,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopOpossom_Click"/>
 
-        <Button x:Name="KaufenTierShopQuokka" Content="Kaufen" HorizontalAlignment="Left" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenTierShopQuokka" Content="Kaufen" HorizontalAlignment="Left" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopQuokka_Click"/>
 
-        <Button x:Name="KaufenTierShopTiger" Content="Kaufen" HorizontalAlignment="Left" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenTierShopTiger" Content="Kaufen" HorizontalAlignment="Left" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopTiger_Click"/>
 
-        <Button x:Name="KaufenTierShopGiraffe" Content="Kaufen" HorizontalAlignment="Left" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenTierShopGiraffe" Content="Kaufen" HorizontalAlignment="Left" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopGiraffe_Click"/>
     </Grid>
 </UserControl>

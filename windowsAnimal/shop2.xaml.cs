@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalSimsUp.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,56 @@ namespace AnimalSimsUp.windowsAnimal
         private void zurückButtonShop1_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop1Window;
+        }
+
+        // Hier werden die Gehege Daten aktualisiert
+        private void aktualisierenGehege()
+        {
+            Global.GehegeList[Global.TierList[Global.TierList.Count() - 1].position].tierGehege = Global.TierList[Global.TierList.Count() - 1].tier;
+            Global.mainWindowImages[Global.TierList[Global.TierList.Count() - 1].position].Source = Global.GehegeList[Global.TierList[Global.TierList.Count() - 1].position].tierGehege.tierbild;
+        }
+
+        //Check for Doubles
+        private void checkDoubleEntry()
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == MainWindow.shop1Window.positionGehege)
+                {
+                    Global.TierList.RemoveAt(i);
+                }
+            }
+        }
+
+        //Opossom Kaufen
+        private void KaufenTierShopOpossom_Click(object sender, RoutedEventArgs e)
+        {
+            checkDoubleEntry();
+            Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Opossom()));
+            aktualisierenGehege ();
+        }
+
+        //Quoakka Kaufen
+        private void KaufenTierShopQuokka_Click(object sender, RoutedEventArgs e)
+        {
+            checkDoubleEntry();
+            Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Quokka()));
+            aktualisierenGehege();
+        }
+
+        //Tiger kaufen
+        private void KaufenTierShopTiger_Click(object sender, RoutedEventArgs e)
+        {
+            checkDoubleEntry();
+            Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Tiger()));
+            aktualisierenGehege();
+        }
+
+        private void KaufenTierShopGiraffe_Click(object sender, RoutedEventArgs e)
+        {
+            checkDoubleEntry();
+            Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Giraffe()));
+            aktualisierenGehege();
         }
     }
 }

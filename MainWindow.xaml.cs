@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSimsUp.Klassen;
 using AnimalSimsUp.windowsAnimal;
 
 
@@ -35,6 +36,18 @@ namespace AnimalSimsUp
             InitializeComponent();
             this.contentControlAnimal.Content = mainWindow;
             AppWindow = this;
+
+            //Init der Geheg List 
+            Gehege gehege1 = new Gehege(0);
+            Gehege gehege2 = new Gehege(1);
+            Gehege gehege3 = new Gehege(2);
+            Gehege gehege4 = new Gehege(3);
+
+            //Init der Main Window Image List
+            Global.mainWindowImages.Add(mainWindow.Tier1Image);
+            Global.mainWindowImages.Add(mainWindow.Tier2Image);
+            Global.mainWindowImages.Add(mainWindow.Tier3Image);
+            Global.mainWindowImages.Add(mainWindow.Tier4Image);
 
             //Image Controll 
             shop2Window.Gehege1Image.Stretch = Stretch.Fill;

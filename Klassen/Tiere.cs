@@ -20,6 +20,12 @@ namespace AnimalSimsUp.Klassen
     class Tiger: Tier
     {
         private BitmapImage imageTier =  new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+
+        public Tiger() 
+        {
+            setArt();
+        }
+
         public override void setArt()
         {
             tierbild = imageTier;
@@ -30,6 +36,12 @@ namespace AnimalSimsUp.Klassen
     class Giraffe : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
+        
+        public Giraffe() 
+        {
+            setArt();
+        }
+        
         public void setArt() 
         {
             tierbild = imageTier;
@@ -40,6 +52,12 @@ namespace AnimalSimsUp.Klassen
     class Quokka : Tier
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
+        
+        public Quokka() 
+        {
+            setArt();
+        }
+
         public void setArt() 
         {
             tierbild = imageTier;
@@ -50,6 +68,12 @@ namespace AnimalSimsUp.Klassen
     class Opossom : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
+        
+        public Opossom()
+        {
+            setArt();
+        }
+        
         public void setArt() 
         {
             tierbild = imageTier;
