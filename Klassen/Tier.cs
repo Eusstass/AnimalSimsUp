@@ -12,6 +12,7 @@ namespace AnimalSimsUp.Klassen
         public string art;
         public int futterKosten = 20;
         public BitmapImage tierbild;
+        public int kosten;
 
         public int futterValue = 50;
         public int liebeValue = 50;

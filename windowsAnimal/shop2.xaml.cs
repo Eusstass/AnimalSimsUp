@@ -41,6 +41,7 @@ namespace AnimalSimsUp.windowsAnimal
         {
             Global.GehegeList[Global.TierList[Global.TierList.Count() - 1].position].tierGehege = Global.TierList[Global.TierList.Count() - 1].tier;
             Global.mainWindowImages[Global.TierList[Global.TierList.Count() - 1].position].Source = Global.GehegeList[Global.TierList[Global.TierList.Count() - 1].position].tierGehege.tierbild;
+            Global.shop1Images[Global.TierList[Global.TierList.Count() - 1].position].Source = Global.GehegeList[Global.TierList[Global.TierList.Count() - 1].position].tierGehege.tierbild;
         }
 
         //Check for Doubles
@@ -61,6 +62,8 @@ namespace AnimalSimsUp.windowsAnimal
             checkDoubleEntry();
             Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Opossom()));
             aktualisierenGehege ();
+            Global.Geld -= 100;
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
 
         //Quoakka Kaufen
@@ -69,6 +72,8 @@ namespace AnimalSimsUp.windowsAnimal
             checkDoubleEntry();
             Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Quokka()));
             aktualisierenGehege();
+            Global.Geld -= 200;
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
 
         //Tiger kaufen
@@ -77,6 +82,8 @@ namespace AnimalSimsUp.windowsAnimal
             checkDoubleEntry();
             Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Tiger()));
             aktualisierenGehege();
+            Global.Geld -= 300;
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
 
         private void KaufenTierShopGiraffe_Click(object sender, RoutedEventArgs e)
@@ -84,6 +91,8 @@ namespace AnimalSimsUp.windowsAnimal
             checkDoubleEntry();
             Global.TierList.Add(new GehegeSafe(MainWindow.shop1Window.positionGehege, new Giraffe()));
             aktualisierenGehege();
+            Global.Geld -= 400;
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
     }
 }

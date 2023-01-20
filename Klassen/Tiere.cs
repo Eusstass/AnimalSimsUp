@@ -20,6 +20,7 @@ namespace AnimalSimsUp.Klassen
     class Tiger: Tier
     {
         private BitmapImage imageTier =  new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+        private int _kosten = 300;
 
         public Tiger() 
         {
@@ -30,55 +31,59 @@ namespace AnimalSimsUp.Klassen
         {
             tierbild = imageTier;
             art = "Tiger";
+            kosten=_kosten;
         }
         public void fKosten() { }
     }
     class Giraffe : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
-        
+        private int _kosten = 400;
         public Giraffe() 
         {
             setArt();
         }
         
-        public void setArt() 
+        public override void setArt() 
         {
             tierbild = imageTier;
             art = "Giraffe";
+            kosten = _kosten;
         }
-        public void fKosten() { }
+        public override void fKosten() { }
     }
     class Quokka : Tier
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
-        
+        private int _kosten = 200;
         public Quokka() 
         {
             setArt();
         }
 
-        public void setArt() 
+        public override void setArt() 
         {
             tierbild = imageTier;
             art = "Quokka";
+            kosten = _kosten;
         }
-        public void fKosten() { }
+        public override void fKosten() { }
     }
     class Opossom : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
-        
+        private int _kosten = 100;
         public Opossom()
         {
             setArt();
         }
         
-        public void setArt() 
+        public override void setArt() 
         {
             tierbild = imageTier;
             art = "Opossom";
+            kosten = _kosten;
         }
-        public void fKosten() { }
+        public override void fKosten() { }
     }
 }

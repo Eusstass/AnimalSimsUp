@@ -21,21 +21,35 @@ namespace AnimalSimsUp
     /// </summary>
     public partial class Shop1 : UserControl
     {
-        //AnimalSimsUp.windowsAnimal.shop2 shop2 = new AnimalSimsUp.windowsAnimal.shop2();
-        //public static Shop1 shop1Window;
         public int positionGehege = 0;
         public Shop1()
         {
             InitializeComponent();
-            
-             //shop1Window = this;
         }
         
+        //Dir Verkaufs Funktion
+        private void verkauf(int _position)
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == _position)
+                {
+                    Global.Geld += (Global.TierList[i].tier.kosten / 2);
+                    MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
+
+                    Global.GehegeList[_position].tierGehege = null;
+                    Global.TierList.RemoveAt(i);
+
+                    Global.mainWindowImages[this.positionGehege].Source = null;
+                    Global.shop1Images[this.positionGehege].Source = null;
+                }
+            }
+        }
+
         //Der Zurück Knopf
         private void zurückButtonShop1_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.mainWindow;
-            
         }
 
         //Die Kauf Buttons
@@ -67,13 +81,25 @@ namespace AnimalSimsUp
         private void VerkaufenGehege1_Click(object sender, RoutedEventArgs e)
         {
             this.positionGehege = 0;
-            for (int i = 0; i < Global.TierList.Count(); i++)
-            {
-                if (Global.TierList[i].position == this.positionGehege)
-                {
-                    Global.TierList.RemoveAt(i);
-                }
-            }
+            verkauf(this.positionGehege);
+        }
+
+        private void VerkaufenGehege2_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 1;
+            verkauf(this.positionGehege);
+        }
+
+        private void VerkaufenGehege3_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 2;
+            verkauf(this.positionGehege);
+        }
+
+        private void VerkaufenGehege_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 3;
+            verkauf(this.positionGehege);
         }
     }
 }

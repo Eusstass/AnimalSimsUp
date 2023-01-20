@@ -49,6 +49,11 @@ namespace AnimalSimsUp
             Global.mainWindowImages.Add(mainWindow.Tier3Image);
             Global.mainWindowImages.Add(mainWindow.Tier4Image);
 
+            Global.shop1Images.Add(shop1Window.Gehege1Image);
+            Global.shop1Images.Add(shop1Window.Gehege2Image);
+            Global.shop1Images.Add(shop1Window.Gehege3Image);
+            Global.shop1Images.Add(shop1Window.GehegeImage);
+
             //Image Controll 
             shop2Window.Gehege1Image.Stretch = Stretch.Fill;
             shop2Window.Gehege2Image.Stretch = Stretch.Fill;
@@ -58,6 +63,22 @@ namespace AnimalSimsUp
             shop2Window.Gehege2Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
             shop2Window.Gehege3Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
             shop2Window.GehegeImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+
+            for (int i = 0; i < Global.mainWindowImages.Count(); i++)
+            {               
+                Global.mainWindowImages[i].Stretch = Stretch.Fill;
+                Global.shop1Images[i].Stretch = Stretch.Fill;  
+            }
+
+            //Geld und Zeit werden gezetzt
+            mainWindow.UhrAnzeigen.Content = Convert.ToString(Global.Zeit).Replace(",",":") + " Uhr";
+            mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
+
+            //Das erste Tier wird Initialisiert
+            Global.TierList.Add(new GehegeSafe(0, new Opossom()));
+            Global.GehegeList[0].tierGehege = Global.TierList[0].tier;
+            Global.mainWindowImages[0].Source = Global.GehegeList[0].tierGehege.tierbild;
+            Global.shop1Images[0].Source = Global.GehegeList[0].tierGehege.tierbild;
         }
 
 

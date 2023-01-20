@@ -31,5 +31,9 @@
         <Button x:Name="KaufenTierShopTiger" Content="Kaufen" HorizontalAlignment="Left" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopTiger_Click"/>
 
         <Button x:Name="KaufenTierShopGiraffe" Content="Kaufen" HorizontalAlignment="Left" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenTierShopGiraffe_Click"/>
+        <Label Foreground="White" Content="100 Euro" HorizontalAlignment="Left" Margin="130,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" FontSize="18"/>
+        <Label Foreground="White" Content="200 Euro" HorizontalAlignment="Left" Margin="550,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" FontSize="18"/>
+        <Label Foreground="White" Content="300 Euro" HorizontalAlignment="Left" Margin="970,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" FontSize="18"/>
+        <Label Foreground="White" Content="400 Euro" HorizontalAlignment="Left" Margin="1390,140,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" FontSize="18"/>
     </Grid>
 </UserControl>
