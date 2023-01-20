@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AnimalSimsUp.Klassen
 {
-    class Global
+    static class Global
     {
+    
+        public static List<Tier> tierListe = new List<Tier>();
+        public static int zeit;
+        public static int geld;
+
     }
 }

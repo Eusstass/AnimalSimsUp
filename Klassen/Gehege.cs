@@ -8,5 +8,6 @@ namespace AnimalSimsUp.Klassen
 {
     class Gehege
     {
+        public int anzahlTiere;
     }
 }
