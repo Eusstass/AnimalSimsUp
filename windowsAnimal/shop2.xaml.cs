@@ -25,6 +25,7 @@ namespace AnimalSimsUp.windowsAnimal
         public shop2()
         {
             InitializeComponent();
+
             //shop2Window = this;
             //shop1 = Shop1.shop1Window;
         }
