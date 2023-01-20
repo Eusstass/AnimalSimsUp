@@ -1,5 +1,7 @@
-﻿using System;
+﻿using AnimalSimsUp.Klassen;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +34,54 @@ namespace AnimalSimsUp.windowsAnimal
         private void zurückButtonShop1_Click(object sender, RoutedEventArgs e)
         {
             MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop1Window;
+        }
+
+        private void KaufenTierShopOpossom_Click(object sender, RoutedEventArgs e)
+        {
+            if (Global.tierList.Count() < 4)
+            {
+                Global.tierList.Add(new Opossom());
+                
+                Global.gehegeImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
+                Global.shopImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
+            }
+
+        }
+
+        private void KaufenTierShopQuokka_Click(object sender, RoutedEventArgs e)
+        {
+            if (Global.tierList.Count() < 4)
+            {
+                Global.tierList.Add(new Quokka());
+
+                Global.gehegeImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
+                Global.shopImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
+
+            }
+        }
+
+        private void KaufenTierShopTiger_Click(object sender, RoutedEventArgs e)
+        {
+            if (Global.tierList.Count() < 4)
+            {
+                Global.tierList.Add(new Tiger());
+
+                Global.gehegeImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+                Global.shopImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+
+            }
+        }
+
+        private void KaufenTierShopGiraffe_Click(object sender, RoutedEventArgs e)
+        {
+            if (Global.tierList.Count() < 4)
+            {
+                Global.tierList.Add(new Giraffe());
+
+                Global.gehegeImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
+                Global.shopImageList[MainWindow.shop1Window.shopIndex].Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpg", UriKind.Relative)));
+
+            }
         }
     }
 }

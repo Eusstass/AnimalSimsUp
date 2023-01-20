@@ -22,6 +22,7 @@ namespace AnimalSimsUp
     {
         //AnimalSimsUp.windowsAnimal.shop2 shop2 = new AnimalSimsUp.windowsAnimal.shop2();
         //public static Shop1 shop1Window;
+        public int shopIndex;
 
         public Shop1()
         {
@@ -37,21 +38,25 @@ namespace AnimalSimsUp
         private void KaufenGehege1_Click(object sender, RoutedEventArgs e)
         {
             AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop2Window;
+            shopIndex = 1;
         }
 
         private void KaufenGehege2_Click(object sender, RoutedEventArgs e)
         {
             AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop2Window;
+            shopIndex = 2;
         }
 
         private void KaufenGehege3_Click(object sender, RoutedEventArgs e)
         {
             AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop2Window;
+            shopIndex = 3;
         }
 
         private void KaufenGehege_Click(object sender, RoutedEventArgs e)
         {
             AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop2Window;
+            shopIndex = 0;
         }
     }
 }

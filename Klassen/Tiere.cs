@@ -12,6 +12,7 @@ namespace AnimalSimsUp.Klassen
         {
             art = "Tiger";
         }
+<<<<<<< Updated upstream
     }
     class Giraffe : Tier 
     {
@@ -34,5 +35,50 @@ namespace AnimalSimsUp.Klassen
             art = "Opossom";
         }
     
+=======
+        public override void fKosten()
+        {
+            futterKosten = 50;
+        }
+    }
+    class Giraffe : Tier 
+    {
+        private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
+        public override void setArt() 
+        {
+            tierbild = imageTier;
+            art = "Giraffe";
+        }
+        public override void fKosten()
+        {
+            futterKosten = 50;
+        }
+    }
+    class Quokka : Tier
+    {
+        private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
+        public override void setArt() 
+        {
+            tierbild = imageTier;
+            art = "Quokka";
+        }
+        public override void fKosten()
+        {
+            futterKosten = 50;
+        }
+    }
+    class Opossom : Tier 
+    {
+        private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
+        public override void setArt() 
+        {
+            tierbild = imageTier;
+            art = "Opossom";
+        }
+        public override void fKosten()
+        {
+            futterKosten = 50;
+        }
+>>>>>>> Stashed changes
     }
 }

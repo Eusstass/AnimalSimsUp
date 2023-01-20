@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AnimalSimsUp.Klassen;
 using AnimalSimsUp.windowsAnimal;
 
 
@@ -30,7 +31,35 @@ namespace AnimalSimsUp
         public static MainWindow AppWindow;
         public MainWindow()
         {
+
             InitializeComponent();
+            
+
+            Global.gehegeImageList.Add(MainWindow.mainWindow.Tier1Image);
+            Global.gehegeImageList.Add(MainWindow.mainWindow.Tier2Image);
+            Global.gehegeImageList.Add(MainWindow.mainWindow.Tier3Image);
+            Global.gehegeImageList.Add(MainWindow.mainWindow.Tier4Image);
+
+            Global.shopImageList.Add(MainWindow.shop1Window.Gehege1Image);
+            Global.shopImageList.Add(MainWindow.shop1Window.Gehege2Image);
+            Global.shopImageList.Add(MainWindow.shop1Window.Gehege3Image);
+            Global.shopImageList.Add(MainWindow.shop1Window.Gehege4Image);
+
+            Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier1Nahrung);
+            Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier2Nahrung);
+            Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier3Nahrung);
+            Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier4Nahrung);
+
+            Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier1Pflege);
+            Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier2Pflege);
+            Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier3Pflege);
+            Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier4Pflege);
+
+            Global.liebeProgressBarList.Add(MainWindow.mainWindow.Tier1Liebe);
+            Global.liebeProgressBarList.Add(MainWindow.mainWindow.Tier2Liebe);
+            Global.liebeProgressBarList.Add(MainWindow.mainWindow.Tier3Liebe);
+            Global.liebeProgressBarList.Add(MainWindow.mainWindow.Tier4Liebe);
+
             this.contentControlAnimal.Content = mainWindow;
             AppWindow = this;
         }
