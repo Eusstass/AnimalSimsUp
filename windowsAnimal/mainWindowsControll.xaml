@@ -37,21 +37,33 @@
         <Label Content="Pflege" HorizontalAlignment="Left" Margin="130,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Liebe" HorizontalAlignment="Left" Margin="130,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
+<<<<<<< Updated upstream
         <ProgressBar x:Name="Tier2Nahrung"  HorizontalAlignment="Left" Height="20" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FF0628B0"/>
+=======
+        <ProgressBar x:Name="Tier2Nahrung"  HorizontalAlignment="Left" Height="20" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"  Foreground="#FF0628B0"/>
+>>>>>>> Stashed changes
         <ProgressBar x:Name="Tier2Pflege" HorizontalAlignment="Left" Height="20" Margin="550,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         <ProgressBar x:Name="Tier2Liebe" HorizontalAlignment="Left" Height="20" Margin="550,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FFB03D06"/>
         <Label Content="Futter" HorizontalAlignment="Left" Margin="550,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Pflege" HorizontalAlignment="Left" Margin="550,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Liebe" HorizontalAlignment="Left" Margin="550,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
+<<<<<<< Updated upstream
         <ProgressBar x:Name="Tier3Nahrung"  HorizontalAlignment="Left" Height="20" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FF0628B0"/>
+=======
+        <ProgressBar x:Name="Tier3Nahrung"  HorizontalAlignment="Left" Height="20" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"  Foreground="#FF0628B0"/>
+>>>>>>> Stashed changes
         <ProgressBar x:Name="Tier3Pflege" HorizontalAlignment="Left" Height="20" Margin="970,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         <ProgressBar x:Name="Tier3Liebe" HorizontalAlignment="Left" Height="20" Margin="970,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FFB03D06"/>
         <Label Content="Futter" HorizontalAlignment="Left" Margin="970,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Pflege" HorizontalAlignment="Left" Margin="970,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <Label Content="Liebe" HorizontalAlignment="Left" Margin="970,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
 
+<<<<<<< Updated upstream
         <ProgressBar x:Name="Tier4Nahrung"  HorizontalAlignment="Left" Height="20" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FF0628B0"/>
+=======
+        <ProgressBar x:Name="Tier4Nahrung"  HorizontalAlignment="Left" Height="20" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"  Foreground="#FF0628B0"/>
+>>>>>>> Stashed changes
         <ProgressBar x:Name="Tier4Pflege" HorizontalAlignment="Left" Height="20" Margin="1390,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         <ProgressBar x:Name="Tier4Liebe" HorizontalAlignment="Left" Height="20" Margin="1390,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Foreground="#FFB03D06"/>
         <Label Content="Futter" HorizontalAlignment="Left" Margin="1390,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>

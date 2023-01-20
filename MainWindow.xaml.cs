@@ -50,6 +50,7 @@ namespace AnimalSimsUp
             Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier3Nahrung);
             Global.futterProgressBarList.Add(MainWindow.mainWindow.Tier4Nahrung);
 
+<<<<<<< Updated upstream
             Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier1Pflege);
             Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier2Pflege);
             Global.pflegeProgressBarList.Add(MainWindow.mainWindow.Tier3Pflege);
@@ -62,6 +63,18 @@ namespace AnimalSimsUp
 
             this.contentControlAnimal.Content = mainWindow;
             AppWindow = this;
+=======
+            //Image Controll 
+            shop2Window.Gehege1Image.Stretch = Stretch.Fill;
+            shop2Window.Gehege2Image.Stretch = Stretch.Fill;
+            shop2Window.Gehege3Image.Stretch = Stretch.Fill;
+            shop2Window.GehegeImage.Stretch = Stretch.Fill;
+
+            shop2Window.Gehege1Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
+            shop2Window.Gehege2Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
+            shop2Window.Gehege3Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
+            shop2Window.GehegeImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+>>>>>>> Stashed changes
         }
 
 
