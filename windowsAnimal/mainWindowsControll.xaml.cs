@@ -84,12 +84,17 @@ namespace AnimalSimsUp.windowsAnimal
         //Die Buttons zum Füttern etc.
         private void fuettern_Click(object sender, RoutedEventArgs e)
         {
-            Global.progressBarsFutter[MainWindow.shop1Window.positionGehege].Value += 20;
+            //Die Zeit wird Berechnet
             Global.Zeit += 1;
             Global.Zeit = Global.checkNight(Global.Zeit);
             MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+
+            //Werte werden angepasst
             Global.runtersetzenDerWerte(1);
-            //Global.Geld -= 10;
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege,"nahrung");
+
+
+            //Das Geld  wird abgezogen und eingesetzt
             for (int i = 0; i < Global.TierList.Count(); i++)
             {
                 if (Global.TierList[i].position ==MainWindow.shop1Window.positionGehege)
@@ -104,6 +109,7 @@ namespace AnimalSimsUp.windowsAnimal
             }
         }
 
+        //Der Button zum Pflegen des Tieres
         private void Pflegen_Click(object sender, RoutedEventArgs e)
         {
             Global.progressBarsPflege[MainWindow.shop1Window.positionGehege].Value += 20;
@@ -111,8 +117,11 @@ namespace AnimalSimsUp.windowsAnimal
             Global.Zeit = Global.checkNight(Global.Zeit);
             MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
             Global.runtersetzenDerWerte(1);
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege, "pflege");
         }
 
+
+        //Der Button zum streicheln des Tieres
         private void Streicheln_Click(object sender, RoutedEventArgs e)
         {
             Global.progressBarsLiebe[MainWindow.shop1Window.positionGehege].Value += 20;
@@ -120,6 +129,7 @@ namespace AnimalSimsUp.windowsAnimal
             Global.Zeit = Global.checkNight(Global.Zeit);
             MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
             Global.runtersetzenDerWerte(1);
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege, "liebe");
         }
     }
 }

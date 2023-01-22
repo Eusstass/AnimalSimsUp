@@ -22,6 +22,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier =  new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
         private int _kosten = 300;
         private int _futterKosten = 70;
+        private int _gewinn = 100;
         public Tiger() 
         {
             setArt();
@@ -33,6 +34,7 @@ namespace AnimalSimsUp.Klassen
             tierbild = imageTier;
             art = "Tiger";
             kosten=_kosten;
+            gewinn = _gewinn;
         }
         public void fKosten() 
         {
@@ -44,6 +46,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
         private int _kosten = 400;
         private int _futterKosten = 50;
+        private int _gewinn = 150;
         public Giraffe() 
         {
             setArt();
@@ -55,6 +58,7 @@ namespace AnimalSimsUp.Klassen
             tierbild = imageTier;
             art = "Giraffe";
             kosten = _kosten;
+            gewinn = _gewinn;
         }
         public override void fKosten() 
         {
@@ -66,10 +70,12 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
         private int _kosten = 200;
         private int _futterKosten = 30;
+        private int _gewinn = 50;
         public Quokka() 
         {
             setArt();
             fKosten();
+            gewinn= _gewinn;
         }
 
         public override void setArt() 
@@ -88,6 +94,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
         private int _kosten = 100;
         private int _futterKosten = 20;
+        private int _gewinn = 50;
         public Opossom()
         {
             setArt();
@@ -99,6 +106,7 @@ namespace AnimalSimsUp.Klassen
             tierbild = imageTier;
             art = "Opossom";
             kosten = _kosten;
+            gewinn= _gewinn;
         }
         public override void fKosten() 
         {

@@ -24,13 +24,16 @@ namespace AnimalSimsUp.Klassen
         public static int anzahlTiere = 0;
 
         // Die Allgeinen Funktionen
-
+        //Hier wird die Nacht abgefraght und Ausgeführt
         public static double checkNight(double Uhrzeit)
         {
             if (Uhrzeit >= 22)
             {
                 Uhrzeit = 6;
-                Geld += 500;
+                for (int i = 0; i < TierList.Count(); i++)
+                {
+                    Geld += TierList[i].tier.gewinn;
+                }
                 MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
                 runtersetzenDerWerte(12);
             }
@@ -38,27 +41,49 @@ namespace AnimalSimsUp.Klassen
             return Uhrzeit;
         }
 
+        //Hier wird das heruntersetzen der Tierwerte durchgeführt
         public static void runtersetzenDerWerte(int vergangeneZeit)
         {
             for (int i = 0; i < vergangeneZeit; i++)
             {
-                for (int d = 0; d < progressBarsFutter.Count(); d++)
+                for (int d = 0; d < TierList.Count(); d++)
                 {
-                    if (progressBarsFutter[d] != null && progressBarsLiebe[d] != null && progressBarsPflege[d] != null)
-                    {
-                        progressBarsFutter[d].Value -= 1;
-                        progressBarsLiebe[d].Value -= 1;
-                        progressBarsPflege[d].Value -= 1;
-
-                        if (progressBarsPflege[d].Value <= 0 || progressBarsLiebe[d].Value <= 0 || progressBarsFutter[d].Value <= 0)
-                        {
-                            MainWindow.AppWindow.Close();
-                        }
-                    }
-
-
+                    TierList[d].tier.futterValue -= 1;
+                    TierList[d].tier.liebeValue -= 1;
+                    TierList[d].tier.pflegeValue -= 1;
+                    
+                    changeProgressBars(TierList[d].position, d);
                 }
             }
         }
+
+        //Hier werden Werte hochgesetzt
+        public static void hochsetztenDerWerte(int position, string was)
+        {
+            switch (was)
+            {
+                case "nahrung":  
+                    TierList[position].tier.futterValue += 20; 
+                    break;
+                case "liebe":
+                    TierList[position].tier.liebeValue += 20;
+                    break;
+                case "pflege":
+                    TierList[position].tier.pflegeValue += 20;
+                    break;
+                default:
+                    break;
+            }
+            
+            changeProgressBars(TierList[position].position, position);          
+        }
+
+        //Hier werden dei Ubdates verarbeitet
+        private static void changeProgressBars(int position, int tier)
+        {
+            progressBarsFutter[position].Value = TierList[tier].tier.futterValue;
+            progressBarsLiebe[position].Value = TierList[tier].tier.liebeValue;
+            progressBarsPflege[position].Value = TierList[tier].tier.pflegeValue;
+        }      
     }
 }
