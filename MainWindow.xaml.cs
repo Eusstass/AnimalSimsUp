@@ -64,6 +64,20 @@ namespace AnimalSimsUp
             shop2Window.Gehege3Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
             shop2Window.GehegeImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
 
+            //ProgressBar Init
+            Global.progressBarsFutter.Add(mainWindow.Tier1Nahrung);
+            Global.progressBarsLiebe.Add(mainWindow.Tier1Liebe);
+            Global.progressBarsPflege.Add(mainWindow.Tier1Pflege);
+            Global.progressBarsFutter.Add(null);
+            Global.progressBarsLiebe.Add(null);
+            Global.progressBarsPflege.Add(null);
+            Global.progressBarsFutter.Add(null);
+            Global.progressBarsLiebe.Add(null);
+            Global.progressBarsPflege.Add(null);
+            Global.progressBarsFutter.Add(null);
+            Global.progressBarsLiebe.Add(null);
+            Global.progressBarsPflege.Add(null);
+
             for (int i = 0; i < Global.mainWindowImages.Count(); i++)
             {               
                 Global.mainWindowImages[i].Stretch = Stretch.Fill;

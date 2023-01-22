@@ -21,10 +21,11 @@ namespace AnimalSimsUp.Klassen
     {
         private BitmapImage imageTier =  new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
         private int _kosten = 300;
-
+        private int _futterKosten = 70;
         public Tiger() 
         {
             setArt();
+            fKosten();
         }
 
         public override void setArt()
@@ -33,15 +34,20 @@ namespace AnimalSimsUp.Klassen
             art = "Tiger";
             kosten=_kosten;
         }
-        public void fKosten() { }
+        public void fKosten() 
+        {
+            futterKosten = _futterKosten;
+        }
     }
     class Giraffe : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
         private int _kosten = 400;
+        private int _futterKosten = 50;
         public Giraffe() 
         {
             setArt();
+            fKosten();
         }
         
         public override void setArt() 
@@ -50,15 +56,20 @@ namespace AnimalSimsUp.Klassen
             art = "Giraffe";
             kosten = _kosten;
         }
-        public override void fKosten() { }
+        public override void fKosten() 
+        {
+            futterKosten = _futterKosten;
+        }
     }
     class Quokka : Tier
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
         private int _kosten = 200;
+        private int _futterKosten = 30;
         public Quokka() 
         {
             setArt();
+            fKosten();
         }
 
         public override void setArt() 
@@ -67,15 +78,20 @@ namespace AnimalSimsUp.Klassen
             art = "Quokka";
             kosten = _kosten;
         }
-        public override void fKosten() { }
+        public override void fKosten() 
+        {
+            futterKosten = _futterKosten;
+        }
     }
     class Opossom : Tier 
     {
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
         private int _kosten = 100;
+        private int _futterKosten = 20;
         public Opossom()
         {
             setArt();
+            fKosten();
         }
         
         public override void setArt() 
@@ -84,6 +100,9 @@ namespace AnimalSimsUp.Klassen
             art = "Opossom";
             kosten = _kosten;
         }
-        public override void fKosten() { }
+        public override void fKosten() 
+        {
+            futterKosten = _futterKosten;
+        }
     }
 }

@@ -42,6 +42,13 @@ namespace AnimalSimsUp
 
                     Global.mainWindowImages[this.positionGehege].Source = null;
                     Global.shop1Images[this.positionGehege].Source = null;
+
+                    Global.progressBarsLiebe[positionGehege] = null;
+                    Global.progressBarsPflege[positionGehege] = null;
+                    Global.progressBarsFutter[positionGehege] = null;
+
+                    Global.anzahlTiere = Global.TierList.Count();
+                    MainWindow.mainWindow.AnzahlTiere.Content = Convert.ToString(Global.anzahlTiere) + " Tiere";
                 }
             }
         }

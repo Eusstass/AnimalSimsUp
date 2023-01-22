@@ -41,6 +41,8 @@ namespace AnimalSimsUp.windowsAnimal
                     selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 1";
                 }
             }
+
+            MainWindow.shop1Window.positionGehege = 0;
         }
 
         private void Tier2Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -52,6 +54,7 @@ namespace AnimalSimsUp.windowsAnimal
                     selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 2";
                 }
             }
+            MainWindow.shop1Window.positionGehege = 1;
         }
 
         private void Tier3Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -63,6 +66,7 @@ namespace AnimalSimsUp.windowsAnimal
                     selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 3";
                 }
             }
+            MainWindow.shop1Window.positionGehege = 2;
         }
 
         private void Tier4Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -74,6 +78,48 @@ namespace AnimalSimsUp.windowsAnimal
                     selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 4";
                 }
             }
+            MainWindow.shop1Window.positionGehege = 3;
+        }
+
+        //Die Buttons zum Füttern etc.
+        private void fuettern_Click(object sender, RoutedEventArgs e)
+        {
+            Global.progressBarsFutter[MainWindow.shop1Window.positionGehege].Value += 20;
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+            Global.runtersetzenDerWerte(1);
+            //Global.Geld -= 10;
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position ==MainWindow.shop1Window.positionGehege)
+                {
+                    Global.Geld -= Global.TierList[i].tier.futterKosten;
+                }
+            }
+            MainWindow.mainWindow.GeldBetrag.Content = Global.Geld + " Euro";
+            if(Global.Geld <= 0)
+            {
+                MainWindow.AppWindow.Close();
+            }
+        }
+
+        private void Pflegen_Click(object sender, RoutedEventArgs e)
+        {
+            Global.progressBarsPflege[MainWindow.shop1Window.positionGehege].Value += 20;
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+            Global.runtersetzenDerWerte(1);
+        }
+
+        private void Streicheln_Click(object sender, RoutedEventArgs e)
+        {
+            Global.progressBarsLiebe[MainWindow.shop1Window.positionGehege].Value += 20;
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+            Global.runtersetzenDerWerte(1);
         }
     }
 }

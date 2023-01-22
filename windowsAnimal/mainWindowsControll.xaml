@@ -59,9 +59,9 @@
         <Label Content="Liebe" HorizontalAlignment="Left" Margin="1390,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         
         <!--Das Untere Grid-->
-        <Button x:Name="fuettern" Content="Füttern" Height="50" Width="300" HorizontalAlignment="Left" Margin="30,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF142FC5" FontSize="24"/>
-        <Button x:Name="Pflegen" Content="Pflegen" Height="50" Width="300" HorizontalAlignment="Left" Margin="380,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF06B025" FontSize="24"/>
-        <Button x:Name="Streicheln" Content="Streicheln" Height="50" Width="300" HorizontalAlignment="Left" Margin="730,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FFB03D06" FontSize="24"/>
+        <Button x:Name="fuettern" Content="Füttern" Height="50" Width="300" HorizontalAlignment="Left" Margin="30,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF142FC5" FontSize="24" Click="fuettern_Click"/>
+        <Button x:Name="Pflegen" Content="Pflegen" Height="50" Width="300" HorizontalAlignment="Left" Margin="380,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF06B025" FontSize="24" Click="Pflegen_Click"/>
+        <Button x:Name="Streicheln" Content="Streicheln" Height="50" Width="300" HorizontalAlignment="Left" Margin="730,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FFB03D06" FontSize="24" Click="Streicheln_Click"/>
         <Button Content="Shop" Height="50" Width="300" HorizontalAlignment="Left" Margin="1600,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Wheat" FontSize="24" Click="Button_Click"/>
         <Label x:Name="selectetAnimal" Content="" HorizontalAlignment="Center" Margin="0,743,0,0" Grid.Row="1" VerticalAlignment="Top" Width="341" FontSize="18"/>
     </Grid>
