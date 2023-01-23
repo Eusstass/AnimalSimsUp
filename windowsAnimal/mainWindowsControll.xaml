@@ -6,43 +6,63 @@
              xmlns:local="clr-namespace:AnimalSimsUp.windowsAnimal"
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
-	<Grid x:Name ="gridMain">
-		<!--Tier 1-->
-		<Rectangle x:Name="TierBild1Rect" HorizontalAlignment="Left" Height="300" Margin="100,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name="Tier1Futter" Height="10" Width="300" Margin="100,425,1520,639"/>
-		<ProgressBar x:Name="Tier1Liebe" Height="10" Width="300" Margin="100,450,1520,620"/>
-		<ProgressBar x:Name="Tier1Schlaf" Height="10" Width="300" Margin="100,475,1520,595"/>
-		<ProgressBar x:Name="Tier1Sauberheit" Height="10" Width="300" Margin="100,500,1520,570"/>
+    <Grid x:Name ="gridMain">
+        <!--Die Grid Rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="160px"></RowDefinition>
+            <RowDefinition Height="830px"></RowDefinition>
+            <RowDefinition Height="90px"></RowDefinition>
+        </Grid.RowDefinitions>
 
-		<!--Tier 2-->
-		<Rectangle x:Name="TierBild2Rect" HorizontalAlignment="Left" Height="300" Margin="500,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name="Tier2Futter" HorizontalAlignment="Left" Height="10" Margin="500,425,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name="Tier2Liebe" HorizontalAlignment="Left" Height="10" Margin="500,450,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name="Tier2Schlaf" HorizontalAlignment="Left" Height="10" Margin="500,475,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name="Tier2Sauberheit" HorizontalAlignment="Left" Height="10" Margin="500,500,0,0" VerticalAlignment="Top" Width="300"/>
+        <!--Das Obere Grid-->
+        <Ellipse Width="100px" Height="100px" Margin="30,30,1790,30" Fill="Wheat"/>
+        <Label x:Name="UhrAnzeigen" Content="10:20" HorizontalAlignment="Left" Margin="45,0,0,0" VerticalAlignment="Center" FontSize="24" PreviewMouseLeftButtonDown="UhrAnzeigen_PreviewMouseLeftButtonDown"/>
 
-		<!--Tier 3-->
-		<Rectangle x:Name="TierBild3Rect" HorizontalAlignment="Left" Height="300" Margin="900,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier3Futter" HorizontalAlignment="Left" Height="10" Margin="900,425,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier3Liebe" HorizontalAlignment="Left" Height="10" Margin="900,450,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier3Schlaf" HorizontalAlignment="Left" Height="10" Margin="900,475,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier3Sauberheit" HorizontalAlignment="Left" Height="10" Margin="900,500,0,0" VerticalAlignment="Top" Width="300"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1600,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="Wheat" RenderTransformOrigin="0.47,0.52"/>
+        <Rectangle HorizontalAlignment="Left" Height="50" Margin="1600,90,0,0" Stroke="Black" VerticalAlignment="Top" Width="300" Fill="Wheat" RenderTransformOrigin="0.47,0.52"/>
+        <Label x:Name="GeldBetrag" Content="50 Euro" HorizontalAlignment="Left" Margin="1698,24,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="AnzahlTiere" Content="1 Tiere" HorizontalAlignment="Left" Margin="1698,94,0,0" VerticalAlignment="Top" FontSize="24"/>
 
-		<!--Tier 4-->
-		<Rectangle x:Name="TierBild4Rect" HorizontalAlignment="Left" Height="300" Margin="1300,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier4Futter" HorizontalAlignment="Left" Height="10" Margin="1300,425,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier4Liebe" HorizontalAlignment="Left" Height="10" Margin="1300,450,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier4Schlaf" HorizontalAlignment="Left" Height="10" Margin="1300,475,0,0" VerticalAlignment="Top" Width="300"/>
-		<ProgressBar x:Name ="Tier4Sauberheit" HorizontalAlignment="Left" Height="10" Margin="1300,500,0,0" VerticalAlignment="Top" Width="300"/>
 
-		<!--Button Füttern-->
-		<Button x:Name ="ButtonFuettern" Content="Füttern" HorizontalAlignment="Left" Margin="100,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
-		<!--Button Streichel-->
-		<Button x:Name ="ButtonStreicheln" Content="Streicheln" HorizontalAlignment="Left" Margin="500,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
-		<!--Button Saubermachen-->
-		<Button x:Name ="ButtonSaubermachen" Content="Saubermachen" HorizontalAlignment="Left" Margin="900,980,0,0" VerticalAlignment="Top" Height="36" Width="300"/>
-		<!--Button neues Tier-->
-		<Button x:Name ="neuesTier" Content="NeuesTier" HorizontalAlignment="Left" Margin="1300,980,0,0" VerticalAlignment="Top" Height="36" Width="300" Click="neuesTier_Click"/>
+        <!--Die Mittel Dinger-->
+        <Image x:Name="Tier1Image" HorizontalAlignment="Left" Height="400" Margin="130,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" MouseRightButtonDown="Tier1Image_MouseRightButtonDown" PreviewMouseLeftButtonDown="Tier1Image_PreviewMouseLeftButtonDown"/>
+        <Image x:Name="Tier2Image" HorizontalAlignment="Left" Height="400" Margin="550,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" PreviewMouseLeftButtonDown="Tier2Image_PreviewMouseLeftButtonDown"/>
+        <Image x:Name="Tier3Image" HorizontalAlignment="Left" Height="400" Margin="970,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" PreviewMouseLeftButtonDown="Tier3Image_PreviewMouseLeftButtonDown"/>
+        <Image x:Name="Tier4Image" HorizontalAlignment="Left" Height="400" Margin="1390,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" PreviewMouseLeftButtonDown="Tier4Image_PreviewMouseLeftButtonDown"/>
 
-	</Grid>
+        <ProgressBar x:Name="Tier1Nahrung"  HorizontalAlignment="Left" Height="20" Margin="130,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50" Foreground="#FF0628B0"/>
+        <ProgressBar x:Name="Tier1Pflege" HorizontalAlignment="Left" Height="20" Margin="130,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"/>
+        <ProgressBar x:Name="Tier1Liebe" HorizontalAlignment="Left" Height="20" Margin="130,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50" Foreground="#FFB03D06"/>
+        <Label Content="Futter" HorizontalAlignment="Left" Margin="130,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Pflege" HorizontalAlignment="Left" Margin="130,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Liebe" HorizontalAlignment="Left" Margin="130,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <ProgressBar x:Name="Tier2Nahrung"  HorizontalAlignment="Left" Height="20" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"  Foreground="#FF0628B0"/>
+        <ProgressBar x:Name="Tier2Pflege" HorizontalAlignment="Left" Height="20" Margin="550,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"/>
+        <ProgressBar x:Name="Tier2Liebe" HorizontalAlignment="Left" Height="20" Margin="550,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50" Foreground="#FFB03D06"/>
+        <Label Content="Futter" HorizontalAlignment="Left" Margin="550,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Pflege" HorizontalAlignment="Left" Margin="550,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Liebe" HorizontalAlignment="Left" Margin="550,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <ProgressBar x:Name="Tier3Nahrung"  HorizontalAlignment="Left" Height="20" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"  Foreground="#FF0628B0"/>
+        <ProgressBar x:Name="Tier3Pflege" HorizontalAlignment="Left" Height="20" Margin="970,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"/>
+        <ProgressBar x:Name="Tier3Liebe" HorizontalAlignment="Left" Height="20" Margin="970,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50" Foreground="#FFB03D06"/>
+        <Label Content="Futter" HorizontalAlignment="Left" Margin="970,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Pflege" HorizontalAlignment="Left" Margin="970,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Liebe" HorizontalAlignment="Left" Margin="970,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
+        <ProgressBar x:Name="Tier4Nahrung"  HorizontalAlignment="Left" Height="20" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"  Foreground="#FF0628B0"/>
+        <ProgressBar x:Name="Tier4Pflege" HorizontalAlignment="Left" Height="20" Margin="1390,610,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50"/>
+        <ProgressBar x:Name="Tier4Liebe" HorizontalAlignment="Left" Height="20" Margin="1390,640,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400" Value="50" Foreground="#FFB03D06"/>
+        <Label Content="Futter" HorizontalAlignment="Left" Margin="1390,577,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Pflege" HorizontalAlignment="Left" Margin="1390,607,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Liebe" HorizontalAlignment="Left" Margin="1390,637,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        
+        <!--Das Untere Grid-->
+        <Button x:Name="fuettern" Content="Füttern" Height="50" Width="300" HorizontalAlignment="Left" Margin="30,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF142FC5" FontSize="24" Click="fuettern_Click"/>
+        <Button x:Name="Pflegen" Content="Pflegen" Height="50" Width="300" HorizontalAlignment="Left" Margin="380,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FF06B025" FontSize="24" Click="Pflegen_Click"/>
+        <Button x:Name="Streicheln" Content="Streicheln" Height="50" Width="300" HorizontalAlignment="Left" Margin="730,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="#FFB03D06" FontSize="24" Click="Streicheln_Click"/>
+        <Button Content="Shop" Height="50" Width="300" HorizontalAlignment="Left" Margin="1600,20,0,0" Grid.Row="2" VerticalAlignment="Top" Background="Wheat" FontSize="24" Click="Button_Click"/>
+        <Label Foreground="Wheat" x:Name="selectetAnimal" Content="" HorizontalAlignment="Center" Margin="0,743,0,0" Grid.Row="1" VerticalAlignment="Top" Width="341" FontSize="18"/>
+    </Grid>
 </UserControl>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalSimsUp.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,36 +21,142 @@ namespace AnimalSimsUp.windowsAnimal
     /// </summary>
     public partial class mainWindowsControll : UserControl
     {
-        List<Rectangle> rectangleList = new List<Rectangle>();
-        int anzahl = 4;
         public mainWindowsControll()
         {
-            InitializeComponent();
-            rectangleList.Add(TierBild1Rect);
-            rectangleList.Add(TierBild2Rect);
-            rectangleList.Add(TierBild3Rect);
-            rectangleList.Add(TierBild4Rect);
+            InitializeComponent();            
+        }
+        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = AnimalSimsUp.MainWindow.shop1Window;
         }
 
-        /// <summary>
-        /// Erstellt ein neues Tier Gehege falls nötig
-        /// </summary>
-        public void createNewAnimalShelter()
+        //Wenn ein Tier selectet wird
+        private void Tier1Image_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Rectangle rectangle = new Rectangle();
-            rectangle.Width = 300;
-            rectangle.Height = 300;
-            rectangle.Name = $"TierBild{anzahl}Rect";
-            //rectangle.Margin = new Thickness(rectangleList[anzahl - 4].Margin.Left, rectangleList[anzahl - 4].Margin.Top + 500, 0, 0);
-            rectangle.Margin = new Thickness(800, 800, 0, 0);
-            rectangleList.Add(rectangle);
-            gridMain.Children.Add(rectangle);
-            anzahl++;
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 0)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 1";
+                }
+            }
+
+            MainWindow.shop1Window.positionGehege = 0;
         }
 
-        private void neuesTier_Click(object sender, RoutedEventArgs e)
+        private void Tier2Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            createNewAnimalShelter();
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 1)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 2";
+                }
+            }
+            MainWindow.shop1Window.positionGehege = 1;
+        }
+
+        private void Tier3Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 2)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 3";
+                }
+            }
+            MainWindow.shop1Window.positionGehege = 2;
+        }
+
+        private void Tier4Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 3)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 4";
+                }
+            }
+            MainWindow.shop1Window.positionGehege = 3;
+        }
+
+        //Die Buttons zum Füttern etc.
+        private void fuettern_Click(object sender, RoutedEventArgs e)
+        {
+            //Die Zeit wird Berechnet
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+
+            //Werte werden angepasst
+            Global.runtersetzenDerWerte(1);
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege,"nahrung");
+
+
+            //Das Geld  wird abgezogen und eingesetzt
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position ==MainWindow.shop1Window.positionGehege)
+                {
+                    Global.Geld -= Global.TierList[i].tier.futterKosten * Global.TierList[i].anzahlDerTiere;
+                    Global.ausgaben += Global.TierList[i].tier.futterKosten * Global.TierList[i].anzahlDerTiere;
+                }
+            }
+            MainWindow.mainWindow.GeldBetrag.Content = Global.Geld + " Euro";
+            if (Global.Geld <= 0)
+            {
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
+            }
+        }
+
+        //Der Button zum Pflegen des Tieres
+        private void Pflegen_Click(object sender, RoutedEventArgs e)
+        {
+            Global.progressBarsPflege[MainWindow.shop1Window.positionGehege].Value += 20;
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+            Global.runtersetzenDerWerte(1);
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege, "pflege");
+        }
+
+
+        //Der Button zum streicheln des Tieres
+        private void Streicheln_Click(object sender, RoutedEventArgs e)
+        {
+            Global.progressBarsLiebe[MainWindow.shop1Window.positionGehege].Value += 20;
+            Global.Zeit += 1;
+            Global.Zeit = Global.checkNight(Global.Zeit);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToString(Global.Zeit) + " Uhr";
+            Global.runtersetzenDerWerte(1);
+            Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege, "liebe");
+        }
+
+        //Der Linke Maus Butrton
+        private void Tier1Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 0)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 1";
+                }
+            }
+
+            MainWindow.shop1Window.positionGehege = 0;
+        }
+
+        //Tritt auf wenn du auf die Uhr klickst 
+        private void UhrAnzeigen_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            double vergangeneZeit = 22.0 - Global.Zeit;
+            Global.Zeit = 6;
+            Global.runtersetzenDerWerte(Convert.ToInt32(vergangeneZeit));
+            Global.checkNight(23);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToString(Global.Zeit) + " Uhr";
+
         }
     }
 }
