@@ -27,6 +27,8 @@ namespace AnimalSimsUp.Klassen
         public bool hasAutoFeed;
         public bool hasAutoClean;
 
+        public int anzahlDerTiere = 1;
+
         public GehegeSafe(int _porsition,Tier _tier) 
         {
             this.tier = _tier;

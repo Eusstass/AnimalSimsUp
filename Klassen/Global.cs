@@ -27,12 +27,12 @@ namespace AnimalSimsUp.Klassen
         //Hier wird die Nacht abgefraght und Ausgeführt außerdem wird sofern vorhanden der Auto Feed und Clean ausgeführt
         public static double checkNight(double Uhrzeit)
         {
-            if (Uhrzeit >= 22)
+            if (Uhrzeit > 22)
             {
                 Uhrzeit = 6;
                 for (int i = 0; i < TierList.Count(); i++)
                 {
-                    Geld += TierList[i].tier.gewinn;
+                    Geld += TierList[i].tier.gewinn * TierList[i].anzahlDerTiere;
                 }
                 MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
                 runtersetzenDerWerte(12);
@@ -47,8 +47,9 @@ namespace AnimalSimsUp.Klassen
                     if (TierList[i].hasAutoFeed)
                     {
                         TierList[i].tier.futterValue = 100;
+                        Geld -= TierList[i].tier.futterKosten * 2 * TierList[i].anzahlDerTiere;
                         changeProgressBars(TierList[i].position, i);
-
+                        MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
                     }
                 }
 

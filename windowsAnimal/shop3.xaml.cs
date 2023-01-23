@@ -29,6 +29,13 @@ namespace AnimalSimsUp.windowsAnimal
         //Die Buttons zum kaufen von Ubgrades 
         private void kaufenZusatzTier_Click(object sender, RoutedEventArgs e)
         {
+            foreach (var item in Global.TierList)
+            {
+                if (item.position == MainWindow.shop1Window.positionGehege)
+                {
+                    item.anzahlDerTiere += 1;
+                }
+            }
         }
 
         private void kaufenAutoFutter_Click(object sender, RoutedEventArgs e)

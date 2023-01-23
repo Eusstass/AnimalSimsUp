@@ -64,6 +64,8 @@ namespace AnimalSimsUp
             shop2Window.Gehege2Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
             shop2Window.Gehege3Image.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
             shop2Window.GehegeImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
+            shop3Window.autoFeederImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/autoFeeder.png", UriKind.Relative)));
+            shop3Window.autoRehinigungImage.Source = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/reihigunsRoboter.jfif", UriKind.Relative)));
 
             //ProgressBar Init
             Global.progressBarsFutter.Add(mainWindow.Tier1Nahrung);

@@ -99,7 +99,7 @@ namespace AnimalSimsUp.windowsAnimal
             {
                 if (Global.TierList[i].position ==MainWindow.shop1Window.positionGehege)
                 {
-                    Global.Geld -= Global.TierList[i].tier.futterKosten;
+                    Global.Geld -= Global.TierList[i].tier.futterKosten * Global.TierList[i].anzahlDerTiere;
                 }
             }
             MainWindow.mainWindow.GeldBetrag.Content = Global.Geld + " Euro";
