@@ -108,5 +108,30 @@ namespace AnimalSimsUp
             this.positionGehege = 3;
             verkauf(this.positionGehege);
         }
+
+        //Die Buttons zum Kaufen der Ubgrades
+        private void UpgradesGehege3_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 0;
+            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.shop3Window;
+        }
+
+        private void UpgradesGehege1_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 1;
+            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.shop3Window;
+        }
+
+        private void UpgradesGehege2_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 2;
+            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.shop3Window;
+        }
+
+        private void UpgradesGehege4_Click(object sender, RoutedEventArgs e)
+        {
+            this.positionGehege = 3;
+            AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.shop3Window;
+        }
     }
 }

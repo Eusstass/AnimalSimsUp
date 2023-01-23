@@ -30,6 +30,7 @@ namespace AnimalSimsUp
         public static windowsAnimal.mainWindowsControll mainWindow = new mainWindowsControll();
         public static windowsAnimal.shop2 shop2Window = new windowsAnimal.shop2();
         public static Shop1 shop1Window = new Shop1();
+        public static windowsAnimal.shop3 shop3Window = new shop3();
         public static MainWindow AppWindow;
         public MainWindow()
         {

@@ -24,6 +24,9 @@ namespace AnimalSimsUp.Klassen
         public int position;
         public Tier tier;
 
+        public bool hasAutoFeed;
+        public bool hasAutoClean;
+
         public GehegeSafe(int _porsition,Tier _tier) 
         {
             this.tier = _tier;

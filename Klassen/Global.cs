@@ -24,7 +24,7 @@ namespace AnimalSimsUp.Klassen
         public static int anzahlTiere = 0;
 
         // Die Allgeinen Funktionen
-        //Hier wird die Nacht abgefraght und Ausgeführt
+        //Hier wird die Nacht abgefraght und Ausgeführt außerdem wird sofern vorhanden der Auto Feed und Clean ausgeführt
         public static double checkNight(double Uhrzeit)
         {
             if (Uhrzeit >= 22)
@@ -36,8 +36,23 @@ namespace AnimalSimsUp.Klassen
                 }
                 MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
                 runtersetzenDerWerte(12);
-            }
 
+                for (int i = 0; i < TierList.Count(); i++)
+                {
+                    if (TierList[i].hasAutoClean)
+                    {
+                        TierList[i].tier.pflegeValue = 100;
+                        changeProgressBars(TierList[i].position, i);
+                    }
+                    if (TierList[i].hasAutoFeed)
+                    {
+                        TierList[i].tier.futterValue = 100;
+                        changeProgressBars(TierList[i].position, i);
+
+                    }
+                }
+
+            }
             return Uhrzeit;
         }
 
@@ -60,22 +75,28 @@ namespace AnimalSimsUp.Klassen
         //Hier werden Werte hochgesetzt
         public static void hochsetztenDerWerte(int position, string was)
         {
-            switch (was)
+            for (int i = 0; i < TierList.Count(); i++)
             {
-                case "nahrung":  
-                    TierList[position].tier.futterValue += 20; 
-                    break;
-                case "liebe":
-                    TierList[position].tier.liebeValue += 20;
-                    break;
-                case "pflege":
-                    TierList[position].tier.pflegeValue += 20;
-                    break;
-                default:
-                    break;
+                if (TierList[i].position == position)
+                {
+                    switch (was)
+                    {
+                        case "nahrung":
+                            TierList[i].tier.futterValue += 20;
+                            break;
+                        case "liebe":
+                            TierList[i].tier.liebeValue += 20;
+                            break;
+                        case "pflege":
+                            TierList[i].tier.pflegeValue += 20;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    changeProgressBars(TierList[i].position, i);
+                }
             }
-            
-            changeProgressBars(TierList[position].position, position);          
         }
 
         //Hier werden dei Ubdates verarbeitet
