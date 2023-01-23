@@ -32,6 +32,8 @@ namespace AnimalSimsUp
         public static Shop1 shop1Window = new Shop1();
         public static windowsAnimal.shop3 shop3Window = new shop3();
         public static MainWindow AppWindow;
+        public static windowsAnimal.gameOverScreen gameOverScreen = new windowsAnimal.gameOverScreen();
+        public static windowsAnimal.nachWindow nachtWindow = new windowsAnimal.nachWindow();
         public MainWindow()
         {
             InitializeComponent();

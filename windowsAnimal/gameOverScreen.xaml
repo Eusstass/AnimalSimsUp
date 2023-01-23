@@ -7,6 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Label Content="Game Over" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" FontSize="40" Foreground="Wheat" Width="210"/>
+        <Button x:Name="closeGameButton" Content="Close Game" HorizontalAlignment="Center" Margin="0,321,0,0" VerticalAlignment="Top" Width="91" Click="closeGameButton_Click"/>
+
     </Grid>
 </UserControl>

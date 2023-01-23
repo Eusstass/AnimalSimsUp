@@ -12,8 +12,8 @@
         <Label Content="Auto Futter" HorizontalAlignment="Left" Height="50" FontSize="24" Width="300" Margin="810,318,0,0" VerticalAlignment="Top" Foreground="Wheat"/>
         <Label Content="Auto Reinigung" HorizontalAlignment="Left" Height="50" FontSize="24" Width="300" Margin="1450,318,0,0" VerticalAlignment="Top" Foreground="Wheat"/>
         <Button x:Name="kaufenZusatzTier" Content="500" HorizontalAlignment="Left" Margin="170,900,0,0" VerticalAlignment="Top" Height="50" FontSize="24" Width="300" Click="kaufenZusatzTier_Click"/>
-        <Button x:Name="kaufenAutoFutter" Content="500" HorizontalAlignment="Left" Margin="810,900,0,0" VerticalAlignment="Top" Height="50" FontSize="24" Width="300" Click="kaufenAutoFutter_Click"/>
-        <Button x:Name="kaufenAutoReinigung" Content="500" HorizontalAlignment="Left" Margin="1450,900,0,0" VerticalAlignment="Top" Height="50" FontSize="24" Width="300" Click="kaufenAutoReinigung_Click"/>
+        <Button x:Name="kaufenAutoFutter" Content="500 Euro" HorizontalAlignment="Left" Margin="810,900,0,0" VerticalAlignment="Top" Height="50" FontSize="24" Width="300" Click="kaufenAutoFutter_Click"/>
+        <Button x:Name="kaufenAutoReinigung" Content="500 Euro" HorizontalAlignment="Left" Margin="1450,900,0,0" VerticalAlignment="Top" Height="50" FontSize="24" Width="300" Click="kaufenAutoReinigung_Click"/>
         <Image x:Name="tierDazuKaufenImage" HorizontalAlignment="Left" Height="300" Stretch="Fill" Margin="170,446,0,0" VerticalAlignment="Top" Width="300"/>
         <Image x:Name="autoFeederImage" Source="..\Bilder\autoFeeder.png" Stretch="Fill" HorizontalAlignment="Left" Height="300" Margin="810,446,0,0" VerticalAlignment="Top" Width="300"/>
         <Image x:Name="autoRehinigungImage" Source="..\Bilder\reihigunsRoboter.jfif" Stretch="Fill" HorizontalAlignment="Left" Height="300" Margin="1450,446,0,0" VerticalAlignment="Top" Width="300"/>

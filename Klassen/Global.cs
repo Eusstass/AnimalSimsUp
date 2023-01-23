@@ -20,8 +20,11 @@ namespace AnimalSimsUp.Klassen
 
         //Die Variablen
         public static double Zeit = 6.0;
-        public static int Geld = 10000;
-        public static int anzahlTiere = 0;
+        public static int Geld = 500;
+        public static int anzahlTiere = 1;
+
+        public static int ausgaben = 0;
+        public static int einnamen = 0;
 
         // Die Allgeinen Funktionen
         //Hier wird die Nacht abgefraght und Ausgeführt außerdem wird sofern vorhanden der Auto Feed und Clean ausgeführt
@@ -33,9 +36,10 @@ namespace AnimalSimsUp.Klassen
                 for (int i = 0; i < TierList.Count(); i++)
                 {
                     Geld += TierList[i].tier.gewinn * TierList[i].anzahlDerTiere;
+                    einnamen += TierList[i].tier.gewinn * TierList[i].anzahlDerTiere;
                 }
                 MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
-                runtersetzenDerWerte(12);
+                runtersetzenDerWerte(30);
 
                 for (int i = 0; i < TierList.Count(); i++)
                 {
@@ -48,11 +52,25 @@ namespace AnimalSimsUp.Klassen
                     {
                         TierList[i].tier.futterValue = 100;
                         Geld -= TierList[i].tier.futterKosten * 2 * TierList[i].anzahlDerTiere;
+                        ausgaben += TierList[i].tier.futterKosten * 2 * TierList[i].anzahlDerTiere;
+
                         changeProgressBars(TierList[i].position, i);
+                        if (Geld <= 0)
+                        {
+                            //MainWindow.AppWindow.Close();
+                            MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
+                        }
                         MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
                     }
                 }
-
+                MainWindow.nachtWindow.labelAusgaben.Content = "Ausgaben " + ausgaben + " Euro";
+                MainWindow.nachtWindow.labelEinnahmen.Content = "Einnamen " + einnamen + " Euro";
+                MainWindow.nachtWindow.labelGewinn.Content = "Gewinn " + (einnamen - ausgaben) + " Euro";
+                MainWindow.nachtWindow.labelGeld.Content = "Geld " + Geld + " Euro";
+                MainWindow.nachtWindow.labelTiere.Content = "Tiere " + anzahlTiere;
+                einnamen = 0;
+                ausgaben = 0;
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.nachtWindow;
             }
             return Uhrzeit;
         }
@@ -94,8 +112,24 @@ namespace AnimalSimsUp.Klassen
                         default:
                             break;
                     }
+                  
+                    if (TierList[i].tier.futterValue > 100)
+                    {
+                        TierList[i].tier.futterValue = 100;
+                    }
+
+                    else if (TierList[i].tier.pflegeValue > 100)
+                    {
+                        TierList[i].tier.pflegeValue = 100;
+                    }
+
+                    else if (TierList[i].tier.liebeValue > 100)
+                    {
+                        TierList[i].tier.liebeValue = 100;
+                    }
 
                     changeProgressBars(TierList[i].position, i);
+
                 }
             }
         }
@@ -103,9 +137,16 @@ namespace AnimalSimsUp.Klassen
         //Hier werden dei Ubdates verarbeitet
         private static void changeProgressBars(int position, int tier)
         {
-            progressBarsFutter[position].Value = TierList[tier].tier.futterValue;
-            progressBarsLiebe[position].Value = TierList[tier].tier.liebeValue;
-            progressBarsPflege[position].Value = TierList[tier].tier.pflegeValue;
+            if (progressBarsFutter[position].Value > 0 && progressBarsLiebe[position].Value > 0 && progressBarsPflege[position].Value > 0)
+            {
+                progressBarsFutter[position].Value = TierList[tier].tier.futterValue;
+                progressBarsLiebe[position].Value = TierList[tier].tier.liebeValue;
+                progressBarsPflege[position].Value = TierList[tier].tier.pflegeValue;
+            }
+            else
+            {
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
+            }
         }      
     }
 }

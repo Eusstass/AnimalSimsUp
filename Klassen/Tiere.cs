@@ -22,7 +22,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier =  new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/tiger.jpg", UriKind.Relative)));
         private int _kosten = 300;
         private int _futterKosten = 70;
-        private int _gewinn = 100;
+        private int _gewinn = 300;
         public Tiger() 
         {
             setArt();
@@ -46,7 +46,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/giraffe.jpeg", UriKind.Relative)));
         private int _kosten = 400;
         private int _futterKosten = 50;
-        private int _gewinn = 150;
+        private int _gewinn = 250;
         public Giraffe() 
         {
             setArt();
@@ -70,7 +70,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/quokka.jpg", UriKind.Relative)));
         private int _kosten = 200;
         private int _futterKosten = 30;
-        private int _gewinn = 50;
+        private int _gewinn = 200;
         public Quokka() 
         {
             setArt();
@@ -94,7 +94,7 @@ namespace AnimalSimsUp.Klassen
         private BitmapImage imageTier = new BitmapImage(new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/opossum.jpg", UriKind.Relative)));
         private int _kosten = 100;
         private int _futterKosten = 20;
-        private int _gewinn = 50;
+        private int _gewinn = 150;
         public Opossom()
         {
             setArt();

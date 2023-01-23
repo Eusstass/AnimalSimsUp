@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalSimsUp.Klassen;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,18 +17,18 @@ using System.Windows.Shapes;
 namespace AnimalSimsUp.windowsAnimal
 {
     /// <summary>
-    /// Interaktionslogik für gameOverScreen.xaml
+    /// Interaktionslogik für nachWindow.xaml
     /// </summary>
-    public partial class gameOverScreen : UserControl
+    public partial class nachWindow : UserControl
     {
-        public gameOverScreen()
+        public nachWindow()
         {
             InitializeComponent();
         }
 
-        private void closeGameButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.AppWindow.Close();
+            MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.mainWindow;
         }
     }
 }

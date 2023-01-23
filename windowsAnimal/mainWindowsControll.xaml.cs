@@ -100,12 +100,14 @@ namespace AnimalSimsUp.windowsAnimal
                 if (Global.TierList[i].position ==MainWindow.shop1Window.positionGehege)
                 {
                     Global.Geld -= Global.TierList[i].tier.futterKosten * Global.TierList[i].anzahlDerTiere;
+                    Global.ausgaben += Global.TierList[i].tier.futterKosten * Global.TierList[i].anzahlDerTiere;
                 }
             }
             MainWindow.mainWindow.GeldBetrag.Content = Global.Geld + " Euro";
-            if(Global.Geld <= 0)
+            if (Global.Geld <= 0)
             {
-                MainWindow.AppWindow.Close();
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
         }
 
@@ -127,9 +129,34 @@ namespace AnimalSimsUp.windowsAnimal
             Global.progressBarsLiebe[MainWindow.shop1Window.positionGehege].Value += 20;
             Global.Zeit += 1;
             Global.Zeit = Global.checkNight(Global.Zeit);
-            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToSingle(Global.Zeit) + " Uhr";
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToString(Global.Zeit) + " Uhr";
             Global.runtersetzenDerWerte(1);
             Global.hochsetztenDerWerte(MainWindow.shop1Window.positionGehege, "liebe");
+        }
+
+        //Der Linke Maus Butrton
+        private void Tier1Image_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            for (int i = 0; i < Global.TierList.Count(); i++)
+            {
+                if (Global.TierList[i].position == 0)
+                {
+                    selectetAnimal.Content = Global.TierList[i].tier.art + " Gehege 1";
+                }
+            }
+
+            MainWindow.shop1Window.positionGehege = 0;
+        }
+
+        //Tritt auf wenn du auf die Uhr klickst 
+        private void UhrAnzeigen_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            double vergangeneZeit = 22.0 - Global.Zeit;
+            Global.Zeit = 6;
+            Global.runtersetzenDerWerte(Convert.ToInt32(vergangeneZeit));
+            Global.checkNight(23);
+            MainWindow.mainWindow.UhrAnzeigen.Content = Convert.ToString(Global.Zeit) + " Uhr";
+
         }
     }
 }

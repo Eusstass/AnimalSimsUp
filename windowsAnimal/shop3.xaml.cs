@@ -34,7 +34,18 @@ namespace AnimalSimsUp.windowsAnimal
                 if (item.position == MainWindow.shop1Window.positionGehege)
                 {
                     item.anzahlDerTiere += 1;
+                    Global.Geld -= item.tier.kosten;
+                    Global.ausgaben += item.tier.kosten;
+                    MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
+                    Global.anzahlTiere += 1;
+                    MainWindow.mainWindow.AnzahlTiere.Content = Convert.ToString(Global.anzahlTiere) + " Tiere";
                 }
+            }
+
+            if (Global.Geld <= 0)
+            {
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
         }
 
@@ -47,6 +58,15 @@ namespace AnimalSimsUp.windowsAnimal
                     item.hasAutoFeed= true;
                 }
             }
+
+            Global.Geld -= 500;
+            Global.ausgaben += 500;
+            if (Global.Geld <= 0)
+            {
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
+            }
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
 
         private void kaufenAutoReinigung_Click(object sender, RoutedEventArgs e)
@@ -58,6 +78,15 @@ namespace AnimalSimsUp.windowsAnimal
                     item.hasAutoClean = true;
                 }
             }
+
+            Global.Geld -= 500;
+            Global.ausgaben += 500;
+            if (Global.Geld <= 0)
+            {
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
+            }
+            MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
         }
 
         private void zurückShop3_Click(object sender, RoutedEventArgs e)

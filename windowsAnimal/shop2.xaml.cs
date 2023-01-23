@@ -98,10 +98,12 @@ namespace AnimalSimsUp.windowsAnimal
             addProgressBar(doppelterEintrag);
             aktualisierenGehege ();
             Global.Geld -= 100;
+            Global.ausgaben += 100;
             MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
             if (Global.Geld <= 0)
             {
-                MainWindow.AppWindow.Close();
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
         }
 
@@ -113,10 +115,12 @@ namespace AnimalSimsUp.windowsAnimal
             addProgressBar(doppelterEintrag);
             aktualisierenGehege();
             Global.Geld -= 200;
+            Global.ausgaben += 200;
             MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
             if (Global.Geld <= 0)
             {
-                MainWindow.AppWindow.Close();
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
         }
 
@@ -128,10 +132,12 @@ namespace AnimalSimsUp.windowsAnimal
             addProgressBar(doppelterEintrag);
             aktualisierenGehege();
             Global.Geld -= 400;
+            Global.ausgaben += 400;
             MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
             if (Global.Geld <= 0)
             {
-                MainWindow.AppWindow.Close();
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
         }
 
@@ -143,12 +149,13 @@ namespace AnimalSimsUp.windowsAnimal
             addProgressBar(doppelterEintrag);
             aktualisierenGehege();
             Global.Geld -= 300;
+            Global.ausgaben += 300;
             MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
             if (Global.Geld <= 0)
             {
-                MainWindow.AppWindow.Close();
+                //MainWindow.AppWindow.Close();
+                MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
             }
-
         }
     }
 }

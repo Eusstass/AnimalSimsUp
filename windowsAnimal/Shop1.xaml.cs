@@ -35,6 +35,7 @@ namespace AnimalSimsUp
                 if (Global.TierList[i].position == _position)
                 {
                     Global.Geld += (Global.TierList[i].tier.kosten / 2 * Global.TierList[i].anzahlDerTiere);
+                    Global.einnamen += (Global.TierList[i].tier.kosten / 2 * Global.TierList[i].anzahlDerTiere);
                     MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
 
                     Global.GehegeList[_position].tierGehege = null;
@@ -119,9 +120,10 @@ namespace AnimalSimsUp
                 if(item.position == this.positionGehege)
                 {
                     MainWindow.shop3Window.tierDazuKaufenImage.Source = item.tier.tierbild;
+                    MainWindow.shop3Window.kaufenZusatzTier.Content = item.tier.kosten + " Euro";
                 }
             }
-
+            
             AnimalSimsUp.MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.shop3Window;
         }
 
@@ -134,6 +136,7 @@ namespace AnimalSimsUp
                 if (item.position == this.positionGehege)
                 {
                     MainWindow.shop3Window.tierDazuKaufenImage.Source = item.tier.tierbild;
+                    MainWindow.shop3Window.kaufenZusatzTier.Content = item.tier.kosten + " Euro";
                 }
             }
 
@@ -149,6 +152,7 @@ namespace AnimalSimsUp
                 if (item.position == this.positionGehege)
                 {
                     MainWindow.shop3Window.tierDazuKaufenImage.Source = item.tier.tierbild;
+                    MainWindow.shop3Window.kaufenZusatzTier.Content = item.tier.kosten + " Euro";
                 }
             }
 
@@ -164,6 +168,7 @@ namespace AnimalSimsUp
                 if (item.position == this.positionGehege)
                 {
                     MainWindow.shop3Window.tierDazuKaufenImage.Source = item.tier.tierbild;
+                    MainWindow.shop3Window.kaufenZusatzTier.Content = item.tier.kosten + " Euro";
                 }
             }
 
