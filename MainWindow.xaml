@@ -11,6 +11,8 @@
         WindowState="Maximized" WindowStyle="None" Background="#FF0E0202">
         
     <Grid>
-        <ContentControl x:Name="contentControlAnimal"></ContentControl>
+        <ContentControl x:Name="contentControlAnimal">
+            <MediaElement x:Name="mediaPlayer" LoadedBehavior="Manual" HorizontalAlignment="Left" Height="0" Margin="45,45,0,0" VerticalAlignment="Top" Width="0"/>
+        </ContentControl>
     </Grid>
 </Window>

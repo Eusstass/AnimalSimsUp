@@ -39,6 +39,12 @@ namespace AnimalSimsUp
             InitializeComponent();
             this.contentControlAnimal.Content = mainWindow;
             AppWindow = this;
+            var uri = new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/simsUpTrack.mp3", UriKind.Relative));
+            var player = new MediaPlayer();
+            player.Open(uri);
+            player.Play();
+            //AppWindow.mediaPlayer.Source = new Uri(new Uri(Directory.GetCurrentDirectory(), UriKind.Absolute), new Uri(@"../../Bilder/simsUpTrack.mp3", UriKind.Relative));
+            //AppWindow.mediaPlayer.Play();
 
             //Init der Geheg List 
             Gehege gehege1 = new Gehege(0);

@@ -38,7 +38,7 @@ namespace AnimalSimsUp.Klassen
                     Geld += TierList[i].tier.gewinn * TierList[i].anzahlDerTiere;
                     einnamen += TierList[i].tier.gewinn * TierList[i].anzahlDerTiere;
                 }
-                MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
+                MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Geld) + " Euro";
                 runtersetzenDerWerte(30);
 
                 for (int i = 0; i < TierList.Count(); i++)
@@ -60,7 +60,7 @@ namespace AnimalSimsUp.Klassen
                             //MainWindow.AppWindow.Close();
                             MainWindow.AppWindow.contentControlAnimal.Content = MainWindow.gameOverScreen;
                         }
-                        MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Global.Geld) + " Euro";
+                        MainWindow.mainWindow.GeldBetrag.Content = Convert.ToString(Geld) + " Euro";
                     }
                 }
                 MainWindow.nachtWindow.labelAusgaben.Content = "Ausgaben " + ausgaben + " Euro";
