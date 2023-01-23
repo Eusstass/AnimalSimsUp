@@ -3,41 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace AnimalSimsUp.Klassen
 {
 
-    class Tier
+    class Tier 
     {
         public string art;
-<<<<<<< Updated upstream
-        protected int futterKosten;
-        public int futterValue = 50;
-        public int liebeValue = 50;
-        public int schlafenValue = 80;
-=======
         public int futterKosten = 20;
         public BitmapImage tierbild;
+        public int kosten;
+        public int gewinn;
 
-        public int futterValue = 0;
-        public int liebeValue = 0;
-        public int pflegeValue = 0;
->>>>>>> Stashed changes
+        public int futterValue = 50;
+        public int liebeValue = 50;
+        public int pflegeValue = 50;
 
-        public void fuettern()
+        public void fuettern() 
         {
-            futterValue += 60;
+            futterValue += 10;
         }
-        public void streicheln()
+        public void liebe() 
         {
-            liebeValue+= 60;
+            liebeValue += 10;
         }
-        public void schlafen()
+        public void pflege() 
         {
-            schlafenValue += 60;
+            pflegeValue += 10;
         }
-        public virtual void  setArt(string art) { }
-        public virtual void setFutterKosten(int futterKosten) { }
+
+        public virtual void setArt() { }
+        public virtual void fKosten() { }
 
     }
 }

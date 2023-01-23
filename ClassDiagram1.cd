@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AnimalSimsUp.Tier">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAUAAAAEAAAAACAAAAAAABAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>Tier.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Gehege" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="AnimalSimsUp.Gehege">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gehege.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Tiger">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tiger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Giraffe">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Giraffe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Quokka">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quokka.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Opposum">
+    <Position X="7.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Opposum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.ITier">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAQAAAAEAAAAACAAAAAAABAAIAAAAAAAQAAAAA=</HashCode>
+      <FileName>ITier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimalSimsUp.Global">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAAAABAAAAAA=</HashCode>
+      <FileName>Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

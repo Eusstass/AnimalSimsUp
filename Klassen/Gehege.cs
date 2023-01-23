@@ -10,14 +10,31 @@ namespace AnimalSimsUp.Klassen
 {
     class Gehege
     {
-<<<<<<< Updated upstream
-        public int anzahlTiere;
-=======
+        public Tier tierGehege;
+        public int position;
 
+        public Gehege(int _porsition)
+        {
+            Global.GehegeList.Add(this);
+            this.position = _porsition;
+        }
 
+    }
 
+    class GehegeSafe
+    {
+        public int position;
+        public Tier tier;
 
-        
->>>>>>> Stashed changes
+        public bool hasAutoFeed;
+        public bool hasAutoClean;
+
+        public int anzahlDerTiere = 1;
+
+        public GehegeSafe(int _porsition,Tier _tier) 
+        {
+            this.tier = _tier;
+            this.position = _porsition;
+        }
     }
 }

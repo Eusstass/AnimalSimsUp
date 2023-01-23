@@ -25,17 +25,23 @@
         <Image x:Name="Gehege3Image" HorizontalAlignment="Left" Height="400" Margin="970,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         <Image x:Name="Gehege4Image" HorizontalAlignment="Left" Height="400" Margin="1390,170,0,0" Grid.Row="1" VerticalAlignment="Top" Width="400"/>
         
-        <Button x:Name="KaufenGehege" Content="Kaufen" HorizontalAlignment="Left" Margin="130,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege_Click"/>
-        <Button x:Name="VerkaufenGehege1" Content="Verkaufen" HorizontalAlignment="Left" Margin="130,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
 
-        <Button x:Name="KaufenGehege1" Content="Kaufen" HorizontalAlignment="Left" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege1_Click"/>
-        <Button x:Name="VerkaufenGehege2" Content="Verkaufen" HorizontalAlignment="Left" Margin="550,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenGehege1" Content="Kaufen" HorizontalAlignment="Left" Margin="130,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege1_Click"/>
+        <Button x:Name="VerkaufenGehege1" Content="Verkaufen" HorizontalAlignment="Left" Margin="130,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="VerkaufenGehege1_Click"/>
+
+        <Button x:Name="KaufenGehege2" Content="Kaufen" HorizontalAlignment="Left" Margin="550,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege2_Click"/>
+        <Button x:Name="VerkaufenGehege2" Content="Verkaufen" HorizontalAlignment="Left" Margin="550,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="VerkaufenGehege2_Click"/>
         
-        <Button x:Name="KaufenGehege3" Content="Kaufen" HorizontalAlignment="Left" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege2_Click"/>
-        <Button x:Name="VerkaufenGehege3" Content="Verkaufen" HorizontalAlignment="Left" Margin="970,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenGehege3" Content="Kaufen" HorizontalAlignment="Left" Margin="970,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege3_Click"/>
+        <Button x:Name="VerkaufenGehege3" Content="Verkaufen" HorizontalAlignment="Left" Margin="970,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="VerkaufenGehege3_Click"/>
 
-        <Button x:Name="KaufenGehege4" Content="Kaufen" HorizontalAlignment="Left" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege3_Click"/>
-        <Button x:Name="VerkaufenGehege" Content="Verkaufen" HorizontalAlignment="Left" Margin="1390,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400"/>
+        <Button x:Name="KaufenGehege" Content="Kaufen" HorizontalAlignment="Left" Margin="1390,580,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="KaufenGehege_Click"/>
+        <Button x:Name="VerkaufenGehege" Content="Verkaufen" HorizontalAlignment="Left" Margin="1390,620,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="VerkaufenGehege_Click"/>
+        
+        <Button x:Name="UpgradesGehege1" Content="Upgrades" HorizontalAlignment="Left" Margin="550,660,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="UpgradesGehege1_Click"/>
+        <Button x:Name="UpgradesGehege2" Content="Upgrades" HorizontalAlignment="Left" Margin="970,660,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="UpgradesGehege2_Click"/>
+        <Button x:Name="UpgradesGehege3" Content="Upgrades" HorizontalAlignment="Left" Margin="130,660,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="UpgradesGehege3_Click"/>
+        <Button x:Name="UpgradesGehege4" Content="Upgrades" HorizontalAlignment="Left" Margin="1390,660,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="400" Click="UpgradesGehege4_Click"/>
 
 
     </Grid>
